@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+header {
+  background: url('https://www.tasteofhome.com/wp-content/uploads/2019/05/FB_RistoranteDelLago_Interior_Hero.jpg?w=1200') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ff6347;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  animation: fadeIn 2s ease-in-out;
+}
+header p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about, .menu, .gallery, .reservation {
+  text-align: center;
+}
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.menu-item {
+  background: #1e1e1e;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 15px;
+  width: 220px;
+  transition: transform 0.3s, background 0.3s;
+}
+.menu-item:hover {
+  transform: scale(1.05);
+  background: #272727;
+}
+.menu-item h3 {
+  color: #ff6347;
+}
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+.gallery-images img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+.reservation button {
+  padding: 12px 40px;
+  background: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+.reservation button:hover {
+  background: #e74c3c;
+}
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+}
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #2c2c2c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+.form-container button {
+  background: #ff6347;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.form-container button:hover {
+  background: #e74c3c;
+}
+footer {
+  background: #f3f0f0;
+  color: rgb(16, 3, 3);
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    top: 10px;
+    right: 15px;
+  }
+  .menu-item {
+    width: 100%;
+  }
+}
