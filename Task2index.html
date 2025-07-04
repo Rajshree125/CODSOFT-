@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajshree Gawai | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-indigo-600">Rajshree Gawai</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-indigo-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-2 px-4 shadow-lg" id="mobile-menu">
+            <a href="#home" class="block py-2 hover:text-indigo-600">Home</a>
+            <a href="#about" class="block py-2 hover:text-indigo-600">About</a>
+            <a href="#skills" class="block py-2 hover:text-indigo-600">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-indigo-600">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-indigo-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 text-white">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Rajshree Gawai</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Electronics Engineer & Web Developer</h2>
+                <p class="text-lg mb-8">Pursuing BTech in Electronics and Telecommunication Engineering with a passion for coding and embedded systems.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Contact Me</a>
+                                    </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                    <div class="w-60 h-60 md:w-72 md:h-72 rounded-full bg-white bg-opacity-30 flex items-center justify-center">
+                        <div class="w-56 h-56 md:w-64 md:h-64 rounded-full bg-white bg-opacity-40 flex items-center justify-center overflow-hidden">
+                            <img src="C:\Users\dhana\Downloads\profile.jpg.jpeg" alt="Rajshree Gawai" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
+                        <img src="C:\Users\dhana\Downloads\profile.jpg.jpeg" alt="Rajshree Gawai" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Electronics Engineer & Developer</h3>
+                    <p class="text-lg mb-6">I'm currently pursuing my BTech in Electronics and Telecommunication Engineering with a strong passion for both hardware and software development. My journey in technology has led me to explore various domains from embedded systems to web development.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-semibold text-indigo-600 mb-2">Education</h4>
+                            <p class="mb-1"><span class="font-medium">BTech in ENTC</span></p>
+                            <p class="text-gray-600">Currently pursuing</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-indigo-600 mb-2">Experience</h4>
+                            <p class="mb-1"><span class="font-medium">Web Development</span></p>
+                            <p class="text-gray-600">Intern at Codsoft</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                       <a href="C:\Users\dhana\OneDrive\Desktop\internship codsoft\cv.png.png" download class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition flex items-center">
+  <i class="fas fa-download mr-2"></i> Download CV
+</a>
+
+                        </a>
+                        <a href="#contact" class="border-2 border-indigo-600 text-indigo-600 px-6 py-2 rounded-full font-medium hover:bg-indigo-50 transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">My Skills</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">I've developed a diverse skill set that bridges hardware and software development, allowing me to create comprehensive technical solutions.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Development Skills -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Web Development</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span class="text-indigo-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-indigo-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">TailwindCSS</span>
+                                <span class="text-indigo-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Programming Skills -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span class="text-indigo-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">C/C++</span>
+                                <span class="text-indigo-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Embedded C</span>
+                                <span class="text-indigo-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Skills -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-microchip text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Electronics</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Circuit Design</span>
+                                <span class="text-indigo-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Microcontrollers</span>
+                                <span class="text-indigo-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">IoT Basics</span>
+                                <span class="text-indigo-600">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4">My Projects</h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Here are some of my recent projects showcasing both my software and electronics skills.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      
+      <!-- Project: Musical Academy Website -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="C:\Users\dhana\OneDrive\Desktop\internship codsoft\ma.png" alt="Musical Academy Website" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Musical Academy Website</h3>
+          <p class="text-gray-600">A dynamic website for a music school designed with HTML, CSS, and JavaScript, featuring course listings and registration functionality.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HTML</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CSS</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Portfolio Website -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1470&q=80" alt="Portfolio Website" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+          <p class="text-gray-600">A personal portfolio website built with responsive design principles using Tailwind CSS, showcasing projects and contact information.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">HTML</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">CSS</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Home Automation Simulation -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="C:\Users\dhana\OneDrive\Desktop\internship codsoft\has.png" alt="Home Automation Simulation" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Home Automation Simulation</h3>
+          <p class="text-gray-600">A simulated home automation system for controlling lights, fans, and appliances using sensors, visualized using Proteus.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Arduino</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Proteus</span>
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">IoT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project: Python Password Manager -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1470&q=80" alt="Password Manager" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Password Manager (Python)</h3>
+          <p class="text-gray-600">A simple desktop application built using Pythonfor securely storing and retrieving user passwords.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full">Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Get In Touch</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition w-full md:w-auto">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Email</h4>
+                                    <a href="mailto:rajshree.gawai883@gmail.com" class="text-indigo-600 hover:underline">rajshree.gawai883@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Phone</h4>
+                                    <a href="tel:+919657940208" class="text-indigo-600 hover:underline">+919657940208</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Location</h4>
+                                    <p class="text-gray-600">Pune, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-700 mb-4">Follow Me</h4>
+                            <div class="flex space-x-4"><a>
+                                <a href="https://www.linkedin.com/in/rajshree-gawai-096419305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a><a>
+                                <a href="https://github.com/Rajshree125" class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-github"></i>
+                                </a><a>
+                                <a href="https://x.com/GawaiRajshree?t=kwABuSgstmAO3cSx8h1ckw&s=09" class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-600 hover:text-white transition">
+                                    <i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold text-indigo-400">Rajshree Gawai</div>
+                    <p class="text-gray-400 mt-1">Electronics Engineer & Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Rajshree Gawai. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Update active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Show/hide back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // Back to top functionality
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
