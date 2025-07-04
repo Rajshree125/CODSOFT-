@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TasteBuds - Fine Dining</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reserve</a>
+    </nav>
+    <h1>TasteBuds</h1>
+    <p>Where Flavor Meets Elegance</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin: 20px auto; line-height: 1.8;">
+      Welcome to <strong>TasteBuds</strong>, a culinary sanctuary where fine dining meets heartfelt hospitality...
+      <!-- trimmed for brevity -->
+    </p>
+  </section>
+  
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h3>Butter Chicken</h3>
+        <p>Rich tomato-based curry with tender chicken and spices</p>
+      </div>
+      <div class="menu-item">
+        <h3>Paneer Tikka</h3>
+        <p>Grilled cottage cheese cubes marinated in spiced yogurt</p>
+      </div>
+      <div class="menu-item">
+        <h3>Biryani</h3>
+        <p>Fragrant basmati rice with saffron, herbs, and your choice of meat or vegetables</p>
+      </div>
+      <div class="menu-item">
+        <h3>Masala Dosa</h3>
+        <p>South Indian crispy rice crepe filled with spiced potato mash</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="https://images.all-free-download.com/images/graphiclarge/food_picture_03_hd_pictures_167556.jpg" alt="Butter Chicken" />
+      <img src="https://tse1.mm.bing.net/th/id/OIP.tsDbWTldixOKCb_WfSlK_AHaEx?pid=Api&P=0&h=220" alt="Paneer Tikka" />
+      <img src="https://tse1.mm.bing.net/th/id/OIP.fpZH5oPD42wphiwsJBaHFQHaFC?pid=Api&P=0&h=220" alt="Biryani" />
+      <img src="https://tse4.mm.bing.net/th/id/OIP.ItWufsZuiQGaIomkbOOjNwHaEK?pid=Api&P=0&h=220" alt="Masala Dosa" />
+    </div>
+  </section>
+
+  <section id="reservation" class="reservation">
+    <h2>Reserve a Table</h2>
+    <p>Book your dining experience with us today and enjoy our chef’s best creations.</p>
+    <button onclick="document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });">Book Now</button>
+
+    <div class="form-container" id="booking-form">
+      <form onsubmit="alert('Booking submitted! We will contact you soon.'); return false;">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="date" required />
+        <input type="time" required />
+        <select required>
+          <option value="">Select No. of Guests</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3-4</option>
+          <option>5+</option>
+        </select>
+        <textarea rows="3" placeholder="Special requests (optional)"></textarea>
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TasteBuds | Designed by Rajshree</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom) {
+          section.classList.add("show");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
